@@ -25,6 +25,9 @@ spring:
         testOnReturn: false
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
+
+    thymeleaf:
+        cache: false
 #    http:
 #        encoding:
 #            force: true
@@ -35,10 +38,8 @@ spring:
           enabled: true
           #additional-paths: src/main/java/com
 mybatis:
-  #mapper-locations: classpath:mapping/*.xml
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.jobs.model
-  #type-aliases-package: com.winter.model
 
 #pagehelper分页插件
 pagehelper:

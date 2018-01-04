@@ -3,9 +3,15 @@
 <head>
     <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script th:src="@{js/plugins/jquery-3.2.1.js}"></script>
+
+    <script th:if="${env == 'dev'}" th:src="@{js/plugins/jquery-3.2.1.js}"></script>
+    <script th:if="${env == 'product'}" th:src="@{js/plugins/jquery-3.2.1.min.js}"></script>
+
+    <script th:if="${env == 'dev'}" th:src="@{js/plugins/vue.js}"></script>
+    <script th:if="${env == 'product'}" th:src="@{js/plugins/vue.min.js}"></script>
 </head>
 <body>
 <p>Hi,Get your greeting <a href="/greeting">here</a></p>
+<p th:text="'Hello, ' + ${env} + '!'" />
 </body>
 </html>
