@@ -306,7 +306,7 @@ a:focus {
   display: none;
 }
 .main-header .navbar-brand {
-  color: #fff;
+  /*color: #fff;*/
 }
 .content-header {
   position: relative;
