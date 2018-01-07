@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class GreetingController extends BaseController {
-    @RequestMapping("/")
+    @RequestMapping("/greeting/index")
     public String index() {
         return "index";
     }
